@@ -1,27 +1,11 @@
 #!/usr/bin/python3
-"""
-Place class
-"""
+'''class inherent of Base Model'''
 from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-    """Inherits BaseModel class
+    '''class Place'''
 
-     Attributes:
-        city_id (str): City id
-        user_id (str): User id
-        name (str): place name
-        description (str): description 
-        number_rooms (int): number of rooms
-        number_bathrooms (int): number of bathrooms 
-        max_guest (int): maximum number of guests 
-        price_by_night (int): price by night 
-        latitude (float): latitude 
-        longitude (float): longitude 
-        amenity_ids (list): list of Amenity ids
-
-    """
     city_id = ""
     user_id = ""
     name = ""
@@ -33,3 +17,7 @@ class Place(BaseModel):
     latitude = 0.0
     longitude = 0.0
     amenity_ids = []
+
+    def __init__(self, *args, **kwargs):
+        """initializes Place"""
+        super().__init__(*args, **kwargs)

@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-"""
-State class
-"""
+'''class inherent of BaseModel'''
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """Represent a state
+    '''the class State'''
 
-    Attributes:
-        name (str): name of the state
-
-    """
     name = ""
+
+    def __init__(self, *args, **kwargs):
+        """initializes State"""
+        super().__init__(*args, **kwargs)

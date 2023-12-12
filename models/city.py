@@ -1,18 +1,14 @@
 #!/usr/bin/python3
-"""
-City class 
-"""
+'''class inherent of BaseModel'''
 from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """Represent city
-
-    Attributes:
-        state_id (str): state id.
-        name (str): name of the city
-
-    """
+    '''the class city'''
 
     state_id = ""
     name = ""
+
+    def __init__(self, *args, **kwargs):
+        """initializes City"""
+        super().__init__(*args, **kwargs)
